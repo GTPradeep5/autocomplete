@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="s01">
+      <form>
+        <fieldset style="margin-top: 300px;">
+          <legend style="margin-left: 50px;">Search for movies</legend>
+        </fieldset>
+        <div class="inner-form" style="margin-top: 50px;">
+          <div class="input-field first-wrap">
+            <input id="search" type="text" placeholder="What are you looking for?" [(ngModel)]="searchterm" (keydown)="search($event)">
+          </div>
+          <div class="input-field third-wrap">
+            <button class="btn-search" type="button">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+<div *ngIf="clubs?.length <1">
+  <h3> Sorry, No match</h3>
+</div><br>
+<div class="row">
+  <div class="col-xs-8">
+<div *ngFor="let club of clubs" class="list-group">
+  <div class="list-group-item" style="text-align: center; border:5px solid black">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ club.club }}</h4>
+    <p class="list-group-item-text">{{ club.club }}</p>
+  </div>
+  <span class="pull-right">
+        <img
+          class="img-responsive"
+          style="max-height: 70px;">
+      </span>
+</div>
+
+<br></div></div></div>
